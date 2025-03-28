@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServicioProducto</name>
+    </assembly>
+    <members>
+        <member name="M:ServicioProducto.Controllers.ProductosController.#ctor(Productos.Aplicacion.Consultas.IConsultasProducto,Productos.Aplicacion.Comandos.IComandosProducto)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:ServicioProducto.Controllers.ProductosController.ListarProductos">
+            <summary>
+            Obtiene la lista de productos
+            </summary>
+            <response code="200"> 
+            ListaProductosOut pendiente
+            </response>
+        </member>
+        <member name="M:ServicioProducto.Controllers.ProductosController.ObtenerProducto(System.Guid)">
+            <summary>
+            Obtiene la lista de productos
+            </summary>
+            <response code="200"> 
+            ListaProductosOut pendiente
+            </response>
+        </member>
+        <member name="M:ServicioProducto.Controllers.ProductosController.CrearProducto(Productos.Aplicacion.Dto.ProductoIn)">
+            <summary>
+            Crear un producto
+            </summary>
+            /// <param name="input">
+            pendiente    
+            </param>
+            <response code="200"> 
+            ProductoOut
+            </response>
+        </member>
+    </members>
+</doc>
