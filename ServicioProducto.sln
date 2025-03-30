@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioProducto", "ServicioProducto\ServicioProducto.csproj", "{B98926DE-A9E0-4492-9DAD-8264DF700065}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioProducto.Api", "ServicioProducto\ServicioProducto.Api.csproj", "{B98926DE-A9E0-4492-9DAD-8264DF700065}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Productos.Aplicacion", "Productos.Aplicacion\Productos.Aplicacion.csproj", "{77C39616-5089-48BE-9376-8530B1CEB4AA}"
 EndProject
@@ -36,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B2AE50B-C37C-400B-8357-FD571AF11E79}
 	EndGlobalSection
 EndGlobal
