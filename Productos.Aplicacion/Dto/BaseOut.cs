@@ -1,5 +1,6 @@
-﻿using Productos.Aplicacion.Enum;
+﻿using Productos.Aplicacion.Enumeradores;
 using System.Net;
+
 namespace Productos.Aplicacion.Dto
 {
     public class BaseOut

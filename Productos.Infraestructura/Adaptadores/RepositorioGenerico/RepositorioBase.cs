@@ -1,12 +1,11 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Productos.Dominio.Entidades;
 using Productos.Infraestructura.Adaptadores.Repositorios;
 
 namespace Productos.Infraestructura.Adaptadores.RepositorioGenerico
 {
-    public class RepositorioBase<T> : IRepositorioBase<T> where T : EntidadBase
+    public class RepositorioBase<T> : IRepositorioBase<T> where T : class
     {
         private readonly IServiceProvider _serviceProvider;
 

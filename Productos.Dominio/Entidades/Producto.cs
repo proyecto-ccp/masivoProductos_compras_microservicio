@@ -1,24 +1,23 @@
 ﻿
-using System.ComponentModel.DataAnnotations.Schema;
+using Productos.Dominio.ObjetoValor;
 
 namespace Productos.Dominio.Entidades
 {
-    [Table("producto")]
-    public class Producto: EntidadBase
+    
+    public class Producto : EntidadBaseInt
     {
-        [Column("nombre")]
         public string Nombre { get; set; }
-
-        [Column("descripcion")]
         public string Descripcion { get; set; }
-
-        [Column("url")]
-        public string Url { get; set; }
-
-        [Column("idproveedor")]
-        public Guid IdProveedor { get; set; }
-
-        [Column("preciounitario")]
+        //proveedor
         public decimal PrecioUnitario { get; set; }
+        public Medida Medida { get; set; }
+        public Categoria Categoria { get; set; }
+        public Marca Marca { get; set; }
+        public Color Color { get; set; }
+        public Modelo Modelo { get; set; }
+        public Material Material { get; set; }
+        public string UrlFoto1 { get; set; }
+        public string UrlFoto2 { get; set; }
+
     }
 }
