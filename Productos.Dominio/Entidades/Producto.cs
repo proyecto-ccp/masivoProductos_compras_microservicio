@@ -8,7 +8,7 @@ namespace Productos.Dominio.Entidades
     {
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        //proveedor
+        public Proveedor Proveedor { get; set; }
         public decimal PrecioUnitario { get; set; }
         public Medida Medida { get; set; }
         public Categoria Categoria { get; set; }
