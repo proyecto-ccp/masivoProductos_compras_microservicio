@@ -1,4 +1,4 @@
-﻿using Productos.Aplicacion.Dto;
+﻿using Productos.Aplicacion.Comun;
 
 namespace Productos.Aplicacion.Atributos.Dto
 {

@@ -1,7 +1,7 @@
-﻿using Productos.Aplicacion.Enumeradores;
+﻿
 using System.Net;
 
-namespace Productos.Aplicacion.Dto
+namespace Productos.Aplicacion.Comun
 {
     public class BaseOut
     {

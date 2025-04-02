@@ -26,62 +26,49 @@ namespace Productos.Infraestructura.Adaptadores.Configuraciones
                 .HasMaxLength(255);
 
             builder.Property(x => x.PrecioUnitario)
-                .HasColumnName("precioUnitario")
+                .HasColumnName("preciounitario")
                 .IsRequired(); 
 
             builder.Property(x => x.UrlFoto1)
-                .HasColumnName("urlFoto1")
+                .HasColumnName("urlfoto1")
                 .IsRequired()
                 .HasMaxLength(255);
 
             builder.Property(x => x.UrlFoto2)
-                .HasColumnName("urlFoto2")
+                .HasColumnName("urlfoto2")
                 .HasMaxLength(255);
 
             builder.HasIndex(x => x.Nombre)
                 .IsUnique();
 
-            builder.HasOne(x => x.Proveedor)
-                .WithMany()
-                .HasForeignKey("idProveedor")
-                .IsRequired()
-                .OnDelete(DeleteBehavior.Restrict);
+            builder.Property(x => x.IdProveedor)
+                .HasColumnName("idproveedor")
+                .IsRequired();
 
-            builder.HasOne(x => x.Medida)
-                .WithMany()
-                .HasForeignKey("idMedida")
-                .IsRequired()
-                .OnDelete(DeleteBehavior.Restrict);
+            builder.Property(x => x.IdCategoria)
+                .HasColumnName("idcategoria")
+                .IsRequired();
 
-            builder.HasOne(x => x.Categoria)
-                .WithMany()
-                .HasForeignKey("idCategoria")
-                .IsRequired()
-                .OnDelete(DeleteBehavior.Restrict);
+            builder.Property(x => x.IdMedida)
+                .HasColumnName("idmedida")
+                .IsRequired();
 
-            builder.HasOne(x => x.Marca)
-                .WithMany()
-                .HasForeignKey("idMarca")
-                .IsRequired()
-                .OnDelete(DeleteBehavior.Restrict);
+            builder.Property(x => x.IdMarca)
+                .HasColumnName("idmarca")
+                .IsRequired();
 
-            builder.HasOne(x => x.Color)
-                .WithMany()
-                .HasForeignKey("idColor")
-                .IsRequired()
-                .OnDelete(DeleteBehavior.Restrict);
+            builder.Property(x => x.IdColor)
+                .HasColumnName("idcolor")
+                .IsRequired();
 
-            builder.HasOne(x => x.Modelo)
-                .WithMany()
-                .HasForeignKey("idModelo")
-                .IsRequired()
-                .OnDelete(DeleteBehavior.Restrict);
+            builder.Property(x => x.IdModelo)
+                .HasColumnName("idmodelo")
+                .IsRequired();
 
-            builder.HasOne(x => x.Material)
-                .WithMany()
-                .HasForeignKey("idMaterial")
-                .IsRequired()
-                .OnDelete(DeleteBehavior.Restrict);
+            builder.Property(x => x.IdMaterial)
+                .HasColumnName("idmaterial")
+                .IsRequired();
+
         }
     }
 }

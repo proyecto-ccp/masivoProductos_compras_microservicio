@@ -25,6 +25,7 @@ namespace Productos.Infraestructura.Adaptadores.Repositorios
             modelBuilder.ApplyConfiguration(new MaterialConfiguracion());
             modelBuilder.ApplyConfiguration(new MedidaConfiguracion());
             modelBuilder.ApplyConfiguration(new ModeloConfiguracion());
+            modelBuilder.ApplyConfiguration(new ProductoConfiguracion());
         }
     }
 }

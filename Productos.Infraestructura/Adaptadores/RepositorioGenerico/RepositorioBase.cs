@@ -60,12 +60,11 @@ namespace Productos.Infraestructura.Adaptadores.RepositorioGenerico
                     var ctx = GetContext();
                     ctx.Dispose();
                 }
-                catch(Exception ex)
+                catch (Exception)
                 { }
             }
             this.disposed = true;
         }
-
         public void Dispose()
         {
             Dispose(true);

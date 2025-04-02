@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Entidades\Producto.cs~RF668774a.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Puertos\Integraciones\" />
   </ItemGroup>
 

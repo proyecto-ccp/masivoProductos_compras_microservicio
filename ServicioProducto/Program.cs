@@ -5,6 +5,7 @@ using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Productos.Dominio.Servicios.Atributo;
+using Productos.Dominio.Servicios.Productos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,6 +56,7 @@ builder.Services.AddTransient<IProductoRepositorio, ProductoRepositorio>();
 builder.Services.AddTransient<IAtributoRepositorio, AtributoRepositorio>();
 //Capa Dominio - Servicios
 builder.Services.AddTransient<ConsultarAtributos>();
+builder.Services.AddTransient<RegistrarProducto>();
 
 
 var app = builder.Build();
