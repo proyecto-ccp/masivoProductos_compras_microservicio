@@ -41,12 +41,12 @@ jobs:
         run: dotnet build
       - name: Run tests and collect coverage
         shell: powershell
-        run: dotnet test /p:CollectCoverage=true /p:ExcludeByFile="**/Program.cs" /p:ExcludeByAttribute="ExcludeFromCoverage" /p:CoverletOutputFormat=cobertura
+        run: dotnet test /p:CollectCoverage=true /p:ExcludeByFile="**/Program.cs" /p:ExcludeByAttribute="ExcludeFromCoverage" /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./TestResults/
       - name: Analyze with SonarQube
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"proyecto-ccp_masivoProductos_compras_microservicio" /o:"proyecto-ccp-1" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"proyecto-ccp_masivoProductos_compras_microservicio" /o:"proyecto-ccp-1" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/TestResults/coverage.cobertura.xml"  /d:sonar.scanner.scanAll=false
           dotnet build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
