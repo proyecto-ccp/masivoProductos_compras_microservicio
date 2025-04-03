@@ -2,9 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Productos.Dominio.ObjetoValor;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Productos.Infraestructura.Adaptadores.Configuraciones
 {
+    [ExcludeFromCodeCoverage]
     public class ColorConfiguracion : IEntityTypeConfiguration<Color>
     {
         public void Configure(EntityTypeBuilder<Color> builder)

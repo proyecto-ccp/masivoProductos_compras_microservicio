@@ -2,9 +2,11 @@
 using Productos.Dominio.Entidades;
 using Productos.Dominio.ObjetoValor;
 using Productos.Infraestructura.Adaptadores.Configuraciones;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Productos.Infraestructura.Adaptadores.Repositorios
 {
+    [ExcludeFromCodeCoverage]
     public class ProductosDbContext : DbContext
     {
         public ProductosDbContext(DbContextOptions<ProductosDbContext> options): base(options){ }
@@ -25,6 +27,7 @@ namespace Productos.Infraestructura.Adaptadores.Repositorios
             modelBuilder.ApplyConfiguration(new MaterialConfiguracion());
             modelBuilder.ApplyConfiguration(new MedidaConfiguracion());
             modelBuilder.ApplyConfiguration(new ModeloConfiguracion());
+            modelBuilder.ApplyConfiguration(new ProductoConfiguracion());
         }
     }
 }

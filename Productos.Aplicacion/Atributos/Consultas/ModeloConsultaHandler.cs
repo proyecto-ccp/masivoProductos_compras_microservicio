@@ -2,7 +2,7 @@
 using AutoMapper;
 using MediatR;
 using Productos.Aplicacion.Atributos.Dto;
-using Productos.Aplicacion.Enumeradores;
+using Productos.Aplicacion.Comun;
 using Productos.Dominio.Servicios.Atributo;
 using System.Net;
 

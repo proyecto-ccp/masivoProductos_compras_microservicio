@@ -1,4 +1,4 @@
-﻿namespace Productos.Aplicacion.Enumeradores
+﻿namespace Productos.Aplicacion.Comun
 {
     public enum Resultado
     {

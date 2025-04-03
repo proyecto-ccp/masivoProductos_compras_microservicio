@@ -32,5 +32,6 @@ namespace Productos.Dominio.Servicios.Atributo
         {
             return await _atributoRepositorio.DarModelos() ?? [];
         }
+
     }
 }

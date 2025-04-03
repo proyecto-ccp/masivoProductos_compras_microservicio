@@ -3,7 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Productos.Aplicacion.Atributos.Consultas;
 using Productos.Aplicacion.Atributos.Dto;
-using Productos.Aplicacion.Enumeradores;
+using Productos.Aplicacion.Comun;
 
 
 namespace ServicioProducto.Api.Controllers

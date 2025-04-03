@@ -3,9 +3,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Productos.Dominio.ObjetoValor;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Productos.Infraestructura.Adaptadores.Configuraciones
 {
+    [ExcludeFromCodeCoverage]
     public class MaterialConfiguracion : IEntityTypeConfiguration<Material>
     {
         public void Configure(EntityTypeBuilder<Material> builder)
