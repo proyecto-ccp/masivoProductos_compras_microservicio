@@ -1,24 +1,24 @@
 ﻿
-using System.ComponentModel.DataAnnotations.Schema;
+
+using System.Diagnostics.CodeAnalysis;
 
 namespace Productos.Dominio.Entidades
 {
-    [Table("producto")]
-    public class Producto: EntidadBase
+    [ExcludeFromCodeCoverage]
+    public class Producto : EntidadBaseInt
     {
-        [Column("nombre")]
         public string Nombre { get; set; }
-
-        [Column("descripcion")]
         public string Descripcion { get; set; }
-
-        [Column("url")]
-        public string Url { get; set; }
-
-        [Column("idproveedor")]
         public Guid IdProveedor { get; set; }
-
-        [Column("preciounitario")]
         public decimal PrecioUnitario { get; set; }
+        public int IdMedida { get; set; }
+        public int IdCategoria { get; set; }
+        public int IdMarca { get; set; }
+        public int IdColor { get; set; }
+        public int IdModelo { get; set; }
+        public int IdMaterial { get; set; }
+        public string UrlFoto1 { get; set; }
+        public string UrlFoto2 { get; set; }
+
     }
 }
