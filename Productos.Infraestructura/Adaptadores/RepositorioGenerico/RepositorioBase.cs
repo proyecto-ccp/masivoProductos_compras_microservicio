@@ -1,12 +1,13 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Productos.Dominio.Entidades;
 using Productos.Infraestructura.Adaptadores.Repositorios;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Productos.Infraestructura.Adaptadores.RepositorioGenerico
 {
-    public class RepositorioBase<T> : IRepositorioBase<T> where T : EntidadBase
+    [ExcludeFromCodeCoverage]
+    public class RepositorioBase<T> : IRepositorioBase<T> where T : class
     {
         private readonly IServiceProvider _serviceProvider;
 
@@ -61,12 +62,11 @@ namespace Productos.Infraestructura.Adaptadores.RepositorioGenerico
                     var ctx = GetContext();
                     ctx.Dispose();
                 }
-                catch(Exception ex)
+                catch (Exception)
                 { }
             }
             this.disposed = true;
         }
-
         public void Dispose()
         {
             Dispose(true);
