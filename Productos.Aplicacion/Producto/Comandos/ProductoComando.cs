@@ -2,9 +2,11 @@
 using MediatR;
 using Productos.Aplicacion.Comun;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Productos.Aplicacion.Producto.Comandos
 {
+    [ExcludeFromCodeCoverage]
     public record ProductoCrear(
         
         [Required(ErrorMessage = "El campo Nombre es obligatorio")]

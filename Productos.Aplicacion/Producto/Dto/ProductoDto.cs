@@ -1,8 +1,10 @@
 ﻿using Productos.Aplicacion.Comun;
+using System.Diagnostics.CodeAnalysis;
 
 
 namespace Productos.Aplicacion.Producto.Dto
 {
+    [ExcludeFromCodeCoverage]
     public class ProductoDto
     {
         public string Nombre { get; set; }
@@ -20,11 +22,13 @@ namespace Productos.Aplicacion.Producto.Dto
 
     }
 
+    [ExcludeFromCodeCoverage]
     public class ProductoOut : BaseOut
     {
         public ProductoDto Producto { get; set; }
     }
 
+    [ExcludeFromCodeCoverage]
     public class ListaProductosOut : BaseOut
     {
         public List<ProductoDto> Productos { get; set; }

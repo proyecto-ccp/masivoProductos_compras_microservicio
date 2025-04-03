@@ -33,9 +33,5 @@ namespace Productos.Dominio.Servicios.Atributo
             return await _atributoRepositorio.DarModelos() ?? [];
         }
 
-        public async Task<Categoria> ObtenerCategoria(int id)
-        {
-            return await _atributoRepositorio.DarCategoria(id);
-        }
     }
 }

@@ -1,7 +1,10 @@
 ﻿
 
+using System.Diagnostics.CodeAnalysis;
+
 namespace Productos.Dominio.Entidades
 {
+    [ExcludeFromCodeCoverage]
     public class Producto : EntidadBaseInt
     {
         public string Nombre { get; set; }

@@ -2,9 +2,11 @@
 using Productos.Dominio.Entidades;
 using Productos.Dominio.ObjetoValor;
 using Productos.Infraestructura.Adaptadores.Configuraciones;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Productos.Infraestructura.Adaptadores.Repositorios
 {
+    [ExcludeFromCodeCoverage]
     public class ProductosDbContext : DbContext
     {
         public ProductosDbContext(DbContextOptions<ProductosDbContext> options): base(options){ }

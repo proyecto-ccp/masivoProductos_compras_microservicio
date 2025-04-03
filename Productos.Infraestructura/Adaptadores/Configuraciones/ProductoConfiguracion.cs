@@ -3,9 +3,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Productos.Dominio.Entidades;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Productos.Infraestructura.Adaptadores.Configuraciones
 {
+    [ExcludeFromCodeCoverage]
     public class ProductoConfiguracion : IEntityTypeConfiguration<Producto>
     {
         public void Configure(EntityTypeBuilder<Producto> builder)

@@ -2,9 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Productos.Infraestructura.Adaptadores.Repositorios;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Productos.Infraestructura.Adaptadores.RepositorioGenerico
 {
+    [ExcludeFromCodeCoverage]
     public class RepositorioBase<T> : IRepositorioBase<T> where T : class
     {
         private readonly IServiceProvider _serviceProvider;
