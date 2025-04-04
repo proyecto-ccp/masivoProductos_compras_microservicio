@@ -57,3 +57,10 @@ nunit-*.xml
 /.vs/ProjectEvaluation
 /.vs/ServicioProducto/v17
 *.bin
+/.vs
+/.vs/ServicioProducto/DesignTimeBuild
+/.vs/ServicioProducto
+/.vs/ServicioProducto/DesignTimeBuild
+/.vs/ServicioProducto
+/.vs
+/Productos.Tests/TestResults
