@@ -2,6 +2,8 @@
 
 [![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=proyecto-ccp_masivoProductos_compras_microservicio)
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=proyecto-ccp_masivoProductos_compras_microservicio&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=proyecto-ccp_masivoProductos_compras_microservicio) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=proyecto-ccp_masivoProductos_compras_microservicio&metric=bugs)](https://sonarcloud.io/summary/new_code?id=proyecto-ccp_masivoProductos_compras_microservicio)
+
 <table style="width: 100%;">
     <tbody>
         <tr>
