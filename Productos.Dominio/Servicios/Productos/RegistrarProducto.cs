@@ -10,6 +10,9 @@ namespace Productos.Dominio.Servicios.Productos
         private readonly IProductoRepositorio _productoRepositorio = productoRepositorio;
         private readonly IAtributoRepositorio _atributoRepositorio = atributoRepositorio;
 
+        private readonly string _paramErrorAtributo = "Atributo";
+        private readonly string _paramErrorPrecio = "Precio";
+
         public async Task Crear(Producto input)
         {
             var tareaCategoria = EstablecerCategoria(input);
@@ -21,13 +24,13 @@ namespace Productos.Dominio.Servicios.Productos
             var tareaProveedor = EstablecerProveedor(input);
             await Task.WhenAll(tareaCategoria,tareaMarca,tareaModelo,tareaColor,tareaMaterial,tareaMedida, tareaProveedor);
 
-            var proveedor = tareaProveedor.Result ?? throw new Exception("el proveedor es incorrecto");
-            var categoria = tareaCategoria.Result ?? throw new Exception("La categoria del producto es incorrecta");
-            var marca = tareaMarca.Result ?? throw new Exception("La marca del producto es incorrecta");
-            var modelo = tareaModelo.Result ?? throw new Exception("El modelo del producto es incorrecto");
-            var material = tareaMaterial.Result ?? throw new Exception("El material del producto es incorrecto");
-            var color = tareaColor.Result ?? throw new Exception("El color del producto es incorrecto");
-            var medida = tareaMedida.Result ?? throw new Exception("La medida del producto es incorrecta");
+            var proveedor = tareaProveedor.Result;
+            var categoria = tareaCategoria.Result;
+            var marca = tareaMarca.Result;
+            var modelo = tareaModelo.Result;
+            var material = tareaMaterial.Result;
+            var color = tareaColor.Result;
+            var medida = tareaMedida.Result;
 
             input.IdProveedor = proveedor.Id;
             input.IdCategoria = categoria.Id;
@@ -41,31 +44,37 @@ namespace Productos.Dominio.Servicios.Productos
             await _productoRepositorio.Guardar(input);
         }
 
-        private Task<Categoria> EstablecerCategoria(Producto input)
+        private async Task<Categoria> EstablecerCategoria(Producto input)
         {
-            return _atributoRepositorio.DarCategoria(input.IdCategoria);
+            Categoria categoria = await _atributoRepositorio.DarCategoria(input.IdCategoria) ?? throw new ArgumentNullException(_paramErrorAtributo, "La categoria no existe");
+            return categoria;
         }
-        private Task<Marca> EstablecerMarca(Producto input)
+        private async Task<Marca> EstablecerMarca(Producto input)
         {
-            return _atributoRepositorio.DarMarca(input.IdMarca);
+            Marca marca = await _atributoRepositorio.DarMarca(input.IdMarca) ?? throw new ArgumentNullException(_paramErrorAtributo, "La marca no existe");
+            return marca;
         }   
-        private Task<Modelo> EstablecerModelo(Producto input)
+        private async Task<Modelo> EstablecerModelo(Producto input)
         {
-            return _atributoRepositorio.DarModelo(input.IdModelo);
+            Modelo modelo = await _atributoRepositorio.DarModelo(input.IdModelo) ?? throw new ArgumentNullException(_paramErrorAtributo, "El modelo no existe");
+            return modelo;
         }
-        private Task<Color> EstablecerColor(Producto input)
+        private async Task<Color> EstablecerColor(Producto input)
         {
-            return _atributoRepositorio.DarColor(input.IdColor);
-        }
-
-        private Task<Material> EstablecerMaterial(Producto input)
-        {
-            return _atributoRepositorio.DarMaterial(input.IdMaterial);
+            Color color = await _atributoRepositorio.DarColor(input.IdColor) ?? throw new ArgumentNullException(_paramErrorAtributo, "El color no existe");
+            return color;
         }
 
-        private Task<Medida> EstablecerMedida(Producto input)
+        private async Task<Material> EstablecerMaterial(Producto input)
         {
-            return _atributoRepositorio.DarMedida(input.IdMedida);
+            Material material = await _atributoRepositorio.DarMaterial(input.IdMaterial) ?? throw new ArgumentNullException(_paramErrorAtributo, "El material no existe");
+            return material;
+        }
+
+        private async Task<Medida> EstablecerMedida(Producto input)
+        {
+            Medida medida = await _atributoRepositorio.DarMedida(input.IdMedida) ?? throw new ArgumentNullException(_paramErrorAtributo, "La medida no existe");
+            return medida;
         }
 
         private Task<Proveedor> EstablecerProveedor(Producto input) 
@@ -87,11 +96,11 @@ namespace Productos.Dominio.Servicios.Productos
             return Task.FromResult(proveedor);
         }
 
-        private static void ValidacionValorPrecio(decimal precio) 
+        private void ValidacionValorPrecio(decimal precio) 
         {
             if (precio <= 0)
             {
-                throw new Exception("El precio del producto debe ser mayor a 0");
+                throw new ArgumentNullException(_paramErrorPrecio, "Valor incorrecto");
             }
         }
 
