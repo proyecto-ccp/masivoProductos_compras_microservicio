@@ -1,6 +1,5 @@
 ﻿
 using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Moq;
 using Productos.Aplicacion.Atributos.Consultas;
 using Productos.Aplicacion.Atributos.Dto;
@@ -11,13 +10,15 @@ using Productos.Dominio.Puertos.Repositorios;
 using Productos.Dominio.Servicios.Atributo;
 using System.Net;
 
-namespace Productos.Tests.Dominio
+namespace Productos.Tests.Aplicacion.Consultas
 {
     public class CategoriaConsultaHandlerTest
     {
         private readonly ConsultarAtributos _servicioAtributos;
         private readonly IMapper _mapper;
         private readonly Mock<IAtributoRepositorio> mockAtributoRepositorio;
+        
+        
 
         public CategoriaConsultaHandlerTest()
         {
@@ -25,6 +26,7 @@ namespace Productos.Tests.Dominio
             var config = new MapperConfiguration(cfg => cfg.AddProfile(new AtributoMapeador()));
             _mapper = config.CreateMapper();
             _servicioAtributos = new ConsultarAtributos(mockAtributoRepositorio.Object);
+
         }
 
         /// <summary>
