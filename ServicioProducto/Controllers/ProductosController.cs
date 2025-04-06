@@ -1,8 +1,5 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Productos.Aplicacion.Atributos.Consultas;
-using Productos.Aplicacion.Atributos.Dto;
 using Productos.Aplicacion.Comun;
 using Productos.Aplicacion.Producto.Comandos;
 

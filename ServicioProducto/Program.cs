@@ -9,6 +9,17 @@ using Productos.Dominio.Servicios.Productos;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -58,16 +69,14 @@ builder.Services.AddTransient<IAtributoRepositorio, AtributoRepositorio>();
 builder.Services.AddTransient<ConsultarAtributos>();
 builder.Services.AddTransient<RegistrarProducto>();
 
-
 var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
 
+app.UseCors("AllowAllOrigins");
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
-app.Run();
+await app.RunAsync();
