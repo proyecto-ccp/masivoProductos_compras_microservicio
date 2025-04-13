@@ -4,5 +4,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-central1-docker.pkg.dev/experimento-ccp/serv-producto/productos:latest']
 logsBucket: 'gs://experimento-ccp_cloudbuild/log'
-serviceAccount: 'projects/experimento-ccp/serviceAccounts/compilador@experimento-ccp.iam.gserviceaccount.com'    
-
+options:
+  logging: GCS_ONLY
+serviceAccount: 'projects/experimento-ccp/serviceAccounts/compilador@experimento-ccp.iam.gserviceaccount.com'
