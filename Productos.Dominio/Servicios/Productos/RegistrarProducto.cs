@@ -5,15 +5,15 @@ using Productos.Dominio.ObjetoValor;
 
 namespace Productos.Dominio.Servicios.Productos
 {
-    public class RegistrarProducto(IProductoRepositorio productoRepositorio, IAtributoRepositorio atributoRepositorio)
+    public class RegistrarProducto(Puertos.Repositorios.Consultar productoRepositorio, IAtributoRepositorio atributoRepositorio)
     {
-        private readonly IProductoRepositorio _productoRepositorio = productoRepositorio;
+        private readonly Puertos.Repositorios.Consultar _productoRepositorio = productoRepositorio;
         private readonly IAtributoRepositorio _atributoRepositorio = atributoRepositorio;
 
         private readonly string _paramErrorAtributo = "Atributo";
         private readonly string _paramErrorPrecio = "Precio";
 
-        public async Task Crear(Producto input)
+        public async Task<Producto> Crear(Producto input)
         {
             var tareaCategoria = EstablecerCategoria(input);
             var tareaMarca = EstablecerMarca(input);
@@ -41,7 +41,7 @@ namespace Productos.Dominio.Servicios.Productos
             input.IdMedida = medida.Id;
 
             ValidacionValorPrecio(input.PrecioUnitario);
-            await _productoRepositorio.Guardar(input);
+            return await _productoRepositorio.Guardar(input);
         }
 
         private async Task<Categoria> EstablecerCategoria(Producto input)
@@ -90,7 +90,7 @@ namespace Productos.Dominio.Servicios.Productos
                 Correo = "CorreoProveedor",
                 IdTributario = "IdTributarioProveedor",
                 IdPostal = "IdPostalProveedor",
-                descripcion = "DescripcionProveedor"
+                Descripcion = "DescripcionProveedor"
             };
 
             return Task.FromResult(proveedor);

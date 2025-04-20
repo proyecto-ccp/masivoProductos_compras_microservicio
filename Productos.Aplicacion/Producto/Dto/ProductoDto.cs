@@ -7,6 +7,7 @@ namespace Productos.Aplicacion.Producto.Dto
     [ExcludeFromCodeCoverage]
     public class ProductoDto
     {
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public Guid IdProveedor { get; set; }

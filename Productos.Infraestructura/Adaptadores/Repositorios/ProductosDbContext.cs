@@ -18,6 +18,7 @@ namespace Productos.Infraestructura.Adaptadores.Repositorios
         public DbSet<Color> Colores { get; set; }
         public DbSet<Modelo> Modelos { get; set; }
         public DbSet<Material> Materiales { get; set; }
+        public DbSet<Parametro> Parametros { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,6 +29,7 @@ namespace Productos.Infraestructura.Adaptadores.Repositorios
             modelBuilder.ApplyConfiguration(new MedidaConfiguracion());
             modelBuilder.ApplyConfiguration(new ModeloConfiguracion());
             modelBuilder.ApplyConfiguration(new ProductoConfiguracion());
+            modelBuilder.ApplyConfiguration(new ParametroConfiguracion());
         }
     }
 }
