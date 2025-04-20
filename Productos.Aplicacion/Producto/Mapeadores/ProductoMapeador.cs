@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Productos.Aplicacion.Producto.Comandos;
 using Productos.Aplicacion.Producto.Dto;
-using Productos.Dominio.ObjetoValor;
 
 
 namespace Productos.Aplicacion.Producto.Mapeadores
@@ -13,7 +12,6 @@ namespace Productos.Aplicacion.Producto.Mapeadores
             CreateMap<Dominio.Entidades.Producto, ProductoDto>().ReverseMap();
 
             CreateMap<ProductoCrear, Dominio.Entidades.Producto>().ReverseMap();
-
         }
     }
 }

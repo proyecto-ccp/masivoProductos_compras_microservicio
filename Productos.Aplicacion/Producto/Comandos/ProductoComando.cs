@@ -14,24 +14,26 @@ namespace Productos.Aplicacion.Producto.Comandos
         [Required(ErrorMessage = "El campo Descripcion es obligatorio")]
         string Descripcion,
         [Required(ErrorMessage = "El campo IdProveedor es obligatorio")]
-        Guid IdProveedor,
+        Guid? IdProveedor,
         [Required(ErrorMessage = "El campo PrecioUnitario es obligatorio")]
-        decimal PrecioUnitario,
+        decimal? PrecioUnitario,
         [Required(ErrorMessage = "El campo IdMedida es obligatorio")]
-        int IdMedida,
+        int? IdMedida,
         [Required(ErrorMessage = "El campo IdCategoria es obligatorio")]
-        int IdCategoria,
+        int? IdCategoria,
         [Required(ErrorMessage = "El campo IdMarca es obligatorio")]
-        int IdMarca,
+        int? IdMarca,
         [Required(ErrorMessage = "El campo IdColor es obligatorio")]
-        int IdColor,
+        int? IdColor,
         [Required(ErrorMessage = "El campo IdModelo es obligatorio")]
-        int IdModelo,
+        int? IdModelo,
         [Required(ErrorMessage = "El campo IdMaterial es obligatorio")]
-        int IdMaterial,
+        int? IdMaterial,
         [Required(ErrorMessage = "El campo UrlFoto1 es obligatorio")]
         string UrlFoto1,
-        string UrlFoto2
+        string UrlFoto2,
+        [Required(ErrorMessage = "El campo Cantidad es obligatorio")]
+        int? Cantidad
         ) : IRequest<BaseOut>;
     
 }

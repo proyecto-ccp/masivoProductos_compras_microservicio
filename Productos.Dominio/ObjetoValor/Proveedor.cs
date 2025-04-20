@@ -14,6 +14,6 @@ namespace Productos.Dominio.ObjetoValor
         public string Correo { get; set; }  
         public string IdTributario { get; set; }
         public string IdPostal { get; set; }
-        public string descripcion { get; set; }
+        public string Descripcion { get; set; }
     }
 }
