@@ -65,3 +65,5 @@ nunit-*.xml
 /.vs
 /Productos.Tests/TestResults
 /compilado
+/.vs
+/.vs

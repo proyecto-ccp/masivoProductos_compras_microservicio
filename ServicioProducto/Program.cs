@@ -6,6 +6,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Productos.Dominio.Servicios.Atributo;
 using Productos.Dominio.Servicios.Productos;
+using Productos.Dominio.Servicios.Stock;
+using Productos.Dominio.Puertos.Integraciones;
+using Productos.Infraestructura.Adaptadores.Integraciones;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +29,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Version = "V.1.0.1",
+        Version = "V.1.1.2",
         Title = "Servicio Productos",
         Description = "Administración de productos"
     });
@@ -63,12 +66,15 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<ProductosDbContext>(options =>
                 options.UseNpgsql(builder.Configuration.GetConnectionString("ProductosDbContext")), ServiceLifetime.Transient);
 builder.Services.AddTransient(typeof(IRepositorioBase<>), typeof(RepositorioBase<>));
-builder.Services.AddTransient<IProductoRepositorio, ProductoRepositorio>();
+builder.Services.AddTransient<Productos.Dominio.Puertos.Repositorios.Consultar, ProductoRepositorio>();
 builder.Services.AddTransient<IAtributoRepositorio, AtributoRepositorio>();
+builder.Services.AddTransient<IParametroRepositorio, ParametroRepositorio>();
+builder.Services.AddHttpClient<IServicioInventariosApi, ServicioInventariosApi>();
 //Capa Dominio - Servicios
 builder.Services.AddTransient<ConsultarAtributos>();
 builder.Services.AddTransient<RegistrarProducto>();
-
+builder.Services.AddTransient<Productos.Dominio.Servicios.Productos.Consultar>();
+builder.Services.AddTransient<IngresarInventario>();
 var app = builder.Build();
 
 app.UseSwagger();

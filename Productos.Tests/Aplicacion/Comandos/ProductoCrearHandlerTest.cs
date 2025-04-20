@@ -15,11 +15,11 @@ namespace Productos.Tests.Aplicacion.Comandos
     {
         private readonly IMapper _mapper;
         private readonly RegistrarProducto _registrarProducto;
-        private readonly Mock<IProductoRepositorio> mockProductoRepositorio;
+        private readonly Mock<Productos.Dominio.Puertos.Repositorios.Consultar> mockProductoRepositorio;
         private readonly Mock<IAtributoRepositorio> mockAtributoRepositorio;
         public ProductoCrearHandlerTest()
         {
-            mockProductoRepositorio = new Mock<IProductoRepositorio>();
+            mockProductoRepositorio = new Mock<Productos.Dominio.Puertos.Repositorios.Consultar>();
             mockAtributoRepositorio = new Mock<IAtributoRepositorio>();
             var config = new MapperConfiguration(cfg => cfg.AddProfile(new ProductoMapeador()));
             _mapper = config.CreateMapper();
