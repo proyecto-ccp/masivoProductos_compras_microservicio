@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Productos.Aplicacion.Comun;
 using Productos.Aplicacion.Producto.Comandos;
+using Productos.Aplicacion.Producto.Consultas;
+using Productos.Aplicacion.Producto.Dto;
 
 namespace ServicioProducto.Api.Controllers
 {
@@ -43,6 +45,105 @@ namespace ServicioProducto.Api.Controllers
             if (output.Resultado != Resultado.Error)
             {
                 return Created(string.Empty, output);
+            }
+            else
+            {
+                return Problem(output.Mensaje, statusCode: (int)output.Status);
+            }
+        }
+
+        /// <summary>
+        /// Lista todos los productos
+        /// </summary>
+        /// <response code="200"> 
+        /// ListaProductosOut: objeto de salida <br/>
+        /// Resultado: Enumerador de la operación, Exitoso = 1, Error = 2, SinRegistros = 3 <br/>
+        /// Mensaje: Mensaje de la operación <br/>
+        /// Status: Código de estado HTTP <br/>
+        /// </response>
+        [HttpGet]
+        [Route("Consultar")]
+        [ProducesResponseType(typeof(ListaProductosOut), 200)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 401)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 500)]
+        public async Task<IActionResult> Consultar()
+        {
+            var output = await _mediator.Send(new ProductosConsulta());
+
+            if (output.Resultado == Resultado.SinRegistros)
+            {
+                return NoContent();
+            }
+            else if (output.Resultado == Resultado.Exitoso)
+            {
+                return Ok(output);
+            }
+            else
+            {
+                return Problem(output.Mensaje, statusCode: (int)output.Status);
+            }
+        }
+
+        /// <summary>
+        /// Lista todos los productos de un proveedor
+        /// </summary>
+        /// <response code="200"> 
+        /// ListaProductosOut: objeto de salida <br/>
+        /// Resultado: Enumerador de la operación, Exitoso = 1, Error = 2, SinRegistros = 3 <br/>
+        /// Mensaje: Mensaje de la operación <br/>
+        /// Status: Código de estado HTTP <br/>
+        /// </response>
+        [HttpGet]
+        [Route("ConsultarPorProveedor")]
+        [ProducesResponseType(typeof(ListaProductosOut), 200)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 401)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 500)]
+        public async Task<IActionResult> ConsultarPorProveedor([FromQuery] ProductosPorProveedorConsulta input)
+        {
+            var output = await _mediator.Send(input);
+
+            if (output.Resultado == Resultado.SinRegistros)
+            {
+                return NoContent();
+            }
+            else if (output.Resultado == Resultado.Exitoso)
+            {
+                return Ok(output);
+            }
+            else
+            {
+                return Problem(output.Mensaje, statusCode: (int)output.Status);
+            }
+        }
+
+        /// <summary>
+        /// Obtiene un producto por su Id
+        /// </summary>
+        /// <response code="200"> 
+        /// ProductoOut: objeto de salida <br/>
+        /// Resultado: Enumerador de la operación, Exitoso = 1, Error = 2, SinRegistros = 3 <br/>
+        /// Mensaje: Mensaje de la operación <br/>
+        /// Status: Código de estado HTTP <br/>
+        /// </response>
+        [HttpGet]
+        [Route("ConsultarPorId")]
+        [ProducesResponseType(typeof(ProductoOut), 200)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 401)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 500)]
+        public async Task<IActionResult> ConsultarPorId([FromQuery] ProductoPorIdConsulta input)
+        {
+            var output = await _mediator.Send(input);
+
+            if (output.Resultado == Resultado.SinRegistros)
+            {
+                return NoContent();
+            }
+            else if (output.Resultado == Resultado.Exitoso)
+            {
+                return Ok(output);
             }
             else
             {

@@ -19,14 +19,25 @@ namespace Productos.Infraestructura.Adaptadores.Repositorios
             return await _repositorioProducto.DarListado();
         }
 
-        public async Task Guardar(Producto producto)
+        public async Task<Producto> Guardar(Producto producto)
         {
-            await _repositorioProducto.Guardar(producto);
+            return await _repositorioProducto.Guardar(producto);
         }
 
-        public async Task<Producto> ObtenerPorId(Guid id)
+        public async Task<Producto> ObtenerPorId(int id)
         {
             return await _repositorioProducto.BuscarPorLlave(id);
         }
+
+        public async Task<Producto> ObtenerPorNombre(string nombre)
+        {
+            return await _repositorioProducto.BuscarPorCampos(x => x.Nombre == nombre);
+        }
+
+        public async Task<List<Producto>> ObtenerPorProveedor(Guid idProveedor)
+        {
+            return await _repositorioProducto.DarListadoPorCampos(x => x.IdProveedor == idProveedor);
+        }
+
     }
 }
