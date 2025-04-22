@@ -66,7 +66,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<ProductosDbContext>(options =>
                 options.UseNpgsql(builder.Configuration.GetConnectionString("ProductosDbContext")), ServiceLifetime.Transient);
 builder.Services.AddTransient(typeof(IRepositorioBase<>), typeof(RepositorioBase<>));
-builder.Services.AddTransient<Productos.Dominio.Puertos.Repositorios.Consultar, ProductoRepositorio>();
+builder.Services.AddTransient<Productos.Dominio.Puertos.Repositorios.IProductoRepositorio, ProductoRepositorio>();
 builder.Services.AddTransient<IAtributoRepositorio, AtributoRepositorio>();
 builder.Services.AddTransient<IParametroRepositorio, ParametroRepositorio>();
 builder.Services.AddHttpClient<IServicioInventariosApi, ServicioInventariosApi>();

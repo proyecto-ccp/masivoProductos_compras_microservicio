@@ -3,7 +3,7 @@ using AutoMapper;
 using MediatR;
 using Productos.Aplicacion.Comun;
 using Productos.Aplicacion.Producto.Dto;
-using Productos.Dominio.Puertos.Repositorios;
+using Productos.Dominio.Servicios.Productos;
 using System.Net;
 
 namespace Productos.Aplicacion.Producto.Consultas
@@ -26,7 +26,7 @@ namespace Productos.Aplicacion.Producto.Consultas
 
             try
             {
-                var productos = await _servicio.ObtenerPorProveedor(request.IdProveedor) ?? [];
+                var productos = await _servicio.EjecutarPorProveedor(request.IdProveedor) ?? [];
 
                 if (productos.Count == 0)
                 {
