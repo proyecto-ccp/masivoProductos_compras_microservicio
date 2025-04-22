@@ -10,12 +10,12 @@ namespace Productos.Tests.Dominio
 {
     public class RegistrarProductoTest
     {
-        private readonly Mock<Productos.Dominio.Puertos.Repositorios.Consultar> mockProductoRepositorio;
+        private readonly Mock<Productos.Dominio.Puertos.Repositorios.IProductoRepositorio> mockProductoRepositorio;
         private readonly Mock<IAtributoRepositorio> mockAtributoRepositorio;
 
         public RegistrarProductoTest()
         {
-            mockProductoRepositorio = new Mock<Productos.Dominio.Puertos.Repositorios.Consultar>();
+            mockProductoRepositorio = new Mock<Productos.Dominio.Puertos.Repositorios.IProductoRepositorio>();
             mockAtributoRepositorio = new Mock<IAtributoRepositorio>();
         }
 

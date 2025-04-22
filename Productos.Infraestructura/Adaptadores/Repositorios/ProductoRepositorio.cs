@@ -6,7 +6,7 @@ using System.Diagnostics.CodeAnalysis;
 namespace Productos.Infraestructura.Adaptadores.Repositorios
 {
     [ExcludeFromCodeCoverage]
-    public class ProductoRepositorio : Consultar
+    public class ProductoRepositorio : IProductoRepositorio
     {
         private readonly IRepositorioBase<Producto> _repositorioProducto;
 

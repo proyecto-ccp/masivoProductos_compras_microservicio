@@ -3,7 +3,7 @@ using AutoMapper;
 using MediatR;
 using Productos.Aplicacion.Comun;
 using Productos.Aplicacion.Producto.Dto;
-using Productos.Dominio.Puertos.Repositorios;
+using Productos.Dominio.Servicios.Productos;
 using System.Net;
 
 namespace Productos.Aplicacion.Producto.Consultas
@@ -26,7 +26,7 @@ namespace Productos.Aplicacion.Producto.Consultas
 
             try 
             {
-                var productos = await _servicio.DarListado() ?? [];
+                var productos = await _servicio.Ejecutar() ?? [];
 
                 if (productos.Count == 0)
                 {
