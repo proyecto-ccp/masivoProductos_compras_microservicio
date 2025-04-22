@@ -2,7 +2,7 @@
 
 namespace Productos.Dominio.Puertos.Repositorios
 {
-    public interface Consultar
+    public interface IProductoRepositorio
     {
         Task<Producto> Guardar(Producto producto);
         Task<Producto> ObtenerPorId(int id);

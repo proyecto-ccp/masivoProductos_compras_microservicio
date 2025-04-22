@@ -5,9 +5,9 @@ using Productos.Dominio.ObjetoValor;
 
 namespace Productos.Dominio.Servicios.Productos
 {
-    public class RegistrarProducto(Puertos.Repositorios.Consultar productoRepositorio, IAtributoRepositorio atributoRepositorio)
+    public class RegistrarProducto(Puertos.Repositorios.IProductoRepositorio productoRepositorio, IAtributoRepositorio atributoRepositorio)
     {
-        private readonly Puertos.Repositorios.Consultar _productoRepositorio = productoRepositorio;
+        private readonly Puertos.Repositorios.IProductoRepositorio _productoRepositorio = productoRepositorio;
         private readonly IAtributoRepositorio _atributoRepositorio = atributoRepositorio;
 
         private readonly string _paramErrorAtributo = "Atributo";

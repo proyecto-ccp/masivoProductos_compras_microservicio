@@ -1,12 +1,11 @@
 ﻿
 using Productos.Dominio.Entidades;
-using Productos.Dominio.Puertos.Repositorios;
 
 namespace Productos.Dominio.Servicios.Productos
 {
-    public class Consultar (Puertos.Repositorios.Consultar productoRepositorio)
+    public class Consultar (Puertos.Repositorios.IProductoRepositorio productoRepositorio)
     {
-        private readonly Puertos.Repositorios.Consultar _productoRepositorio = productoRepositorio;
+        private readonly Puertos.Repositorios.IProductoRepositorio _productoRepositorio = productoRepositorio;
 
         public async Task<List<Producto>> Ejecutar()
         {
