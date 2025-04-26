@@ -4,7 +4,6 @@ using Productos.Infraestructura.Adaptadores.RepositorioGenerico;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using Productos.Dominio.Servicios.Atributo;
 using Productos.Dominio.Servicios.Productos;
 using Productos.Dominio.Servicios.Stock;
 using Productos.Dominio.Puertos.Integraciones;
@@ -29,7 +28,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Version = "V.1.1.2",
+        Version = "V.1.2.0",
         Title = "Servicio Productos",
         Description = "Administración de productos"
     });
@@ -71,7 +70,6 @@ builder.Services.AddTransient<IAtributoRepositorio, AtributoRepositorio>();
 builder.Services.AddTransient<IParametroRepositorio, ParametroRepositorio>();
 builder.Services.AddHttpClient<IServicioInventariosApi, ServicioInventariosApi>();
 //Capa Dominio - Servicios
-builder.Services.AddTransient<ConsultarAtributos>();
 builder.Services.AddTransient<RegistrarProducto>();
 builder.Services.AddTransient<Productos.Dominio.Servicios.Productos.Consultar>();
 builder.Services.AddTransient<IngresarInventario>();

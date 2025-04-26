@@ -15,8 +15,4 @@
     <ProjectReference Include="..\Productos.Dominio\Productos.Dominio.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Atributos\Comandos\" />
-  </ItemGroup>
-
 </Project>
