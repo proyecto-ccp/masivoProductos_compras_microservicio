@@ -1,22 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\masivoProductos_compras_microservicio\\",
+  "WorkspaceRootPath": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\masivoproductos_compras_microservicio\\productos.dominio\\servicios\\crearproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|solutionrelative:productos.dominio\\servicios\\crearproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B98926DE-A9E0-4492-9DAD-8264DF700065}|ServicioProducto\\ServicioProducto.Api.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\servicioproducto\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B98926DE-A9E0-4492-9DAD-8264DF700065}|ServicioProducto\\ServicioProducto.Api.csproj|solutionrelative:servicioproducto\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\masivoproductos_compras_microservicio\\productos.dominio\\puertos\\repositorios\\iproductorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.dominio\\servicios\\productos\\registrarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|solutionrelative:productos.dominio\\servicios\\productos\\registrarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B98926DE-A9E0-4492-9DAD-8264DF700065}|ServicioProducto\\ServicioProducto.Api.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\servicioproducto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B98926DE-A9E0-4492-9DAD-8264DF700065}|ServicioProducto\\ServicioProducto.Api.csproj|solutionrelative:servicioproducto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.dominio\\puertos\\repositorios\\iproductorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|solutionrelative:productos.dominio\\puertos\\repositorios\\iproductorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\masivoproductos_compras_microservicio\\productos.dominio\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.dominio\\puertos\\repositorios\\iparametrorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|solutionrelative:productos.dominio\\puertos\\repositorios\\iparametrorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.dominio\\entidades\\entidadbaseint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|solutionrelative:productos.dominio\\entidades\\entidadbaseint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.dominio\\objetovalor\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|solutionrelative:productos.dominio\\objetovalor\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.dominio\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|solutionrelative:productos.dominio\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\edward romero\\documents\\miso\\proyecto final ii\\masivoproductos_compras_microservicio\\productos.dominio\\entidades\\entidadbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|solutionrelative:productos.dominio\\entidades\\entidadbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.dominio\\objetovalor\\parametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|solutionrelative:productos.dominio\\objetovalor\\parametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.dominio\\objetovalor\\enumeradorparametros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|solutionrelative:productos.dominio\\objetovalor\\enumeradorparametros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B98926DE-A9E0-4492-9DAD-8264DF700065}|ServicioProducto\\ServicioProducto.Api.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\servicioproducto\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B98926DE-A9E0-4492-9DAD-8264DF700065}|ServicioProducto\\ServicioProducto.Api.csproj|solutionrelative:servicioproducto\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D44C9A39-6901-49A7-A25D-FA295504BF62}|Productos.Infraestructura\\Productos.Infraestructura.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.infraestructura\\adaptadores\\repositorios\\productosdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D44C9A39-6901-49A7-A25D-FA295504BF62}|Productos.Infraestructura\\Productos.Infraestructura.csproj|solutionrelative:productos.infraestructura\\adaptadores\\repositorios\\productosdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D44C9A39-6901-49A7-A25D-FA295504BF62}|Productos.Infraestructura\\Productos.Infraestructura.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.infraestructura\\adaptadores\\repositoriogenerico\\repositoriobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D44C9A39-6901-49A7-A25D-FA295504BF62}|Productos.Infraestructura\\Productos.Infraestructura.csproj|solutionrelative:productos.infraestructura\\adaptadores\\repositoriogenerico\\repositoriobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D44C9A39-6901-49A7-A25D-FA295504BF62}|Productos.Infraestructura\\Productos.Infraestructura.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.infraestructura\\adaptadores\\repositoriogenerico\\irepositoriobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D44C9A39-6901-49A7-A25D-FA295504BF62}|Productos.Infraestructura\\Productos.Infraestructura.csproj|solutionrelative:productos.infraestructura\\adaptadores\\repositoriogenerico\\irepositoriobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.dominio\\servicios\\stock\\ingresarinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|solutionrelative:productos.dominio\\servicios\\stock\\ingresarinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|d:\\git\\ccp\\masivoproductos_compras_microservicio\\productos.dominio\\servicios\\productos\\consultar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B541C90-5184-4BB6-9949-F6722EC9B811}|Productos.Dominio\\Productos.Dominio.csproj|solutionrelative:productos.dominio\\servicios\\productos\\consultar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,58 +78,214 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{e3fb24c2-2e84-3146-a5f8-bc25bbc68f8a}"
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CrearProducto.cs",
-              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\masivoProductos_compras_microservicio\\Productos.Dominio\\Servicios\\CrearProducto.cs",
-              "RelativeDocumentMoniker": "Productos.Dominio\\Servicios\\CrearProducto.cs",
-              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\masivoProductos_compras_microservicio\\Productos.Dominio\\Servicios\\CrearProducto.cs",
-              "RelativeToolTip": "Productos.Dominio\\Servicios\\CrearProducto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T01:38:57.878Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\ServicioProducto\\appsettings.json",
+              "RelativeDocumentMoniker": "ServicioProducto\\appsettings.json",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\ServicioProducto\\appsettings.json",
+              "RelativeToolTip": "ServicioProducto\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-26T17:16:03.042Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IProductoRepositorio.cs",
-              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\masivoProductos_compras_microservicio\\Productos.Dominio\\Puertos\\Repositorios\\IProductoRepositorio.cs",
-              "RelativeDocumentMoniker": "Productos.Dominio\\Puertos\\Repositorios\\IProductoRepositorio.cs",
-              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\masivoProductos_compras_microservicio\\Productos.Dominio\\Puertos\\Repositorios\\IProductoRepositorio.cs",
-              "RelativeToolTip": "Productos.Dominio\\Puertos\\Repositorios\\IProductoRepositorio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Title": "RegistrarProducto.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Servicios\\Productos\\RegistrarProducto.cs",
+              "RelativeDocumentMoniker": "Productos.Dominio\\Servicios\\Productos\\RegistrarProducto.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Servicios\\Productos\\RegistrarProducto.cs",
+              "RelativeToolTip": "Productos.Dominio\\Servicios\\Productos\\RegistrarProducto.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwBIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T01:37:12.137Z",
+              "WhenOpened": "2025-04-26T16:20:45.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EntidadBaseInt.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Entidades\\EntidadBaseInt.cs",
+              "RelativeDocumentMoniker": "Productos.Dominio\\Entidades\\EntidadBaseInt.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Entidades\\EntidadBaseInt.cs",
+              "RelativeToolTip": "Productos.Dominio\\Entidades\\EntidadBaseInt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T16:17:58.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EnumeradorParametros.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\ObjetoValor\\EnumeradorParametros.cs",
+              "RelativeDocumentMoniker": "Productos.Dominio\\ObjetoValor\\EnumeradorParametros.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\ObjetoValor\\EnumeradorParametros.cs",
+              "RelativeToolTip": "Productos.Dominio\\ObjetoValor\\EnumeradorParametros.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T16:17:09.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Parametro.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\ObjetoValor\\Parametro.cs",
+              "RelativeDocumentMoniker": "Productos.Dominio\\ObjetoValor\\Parametro.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\ObjetoValor\\Parametro.cs",
+              "RelativeToolTip": "Productos.Dominio\\ObjetoValor\\Parametro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T04:20:51.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IParametroRepositorio.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Puertos\\Repositorios\\IParametroRepositorio.cs",
+              "RelativeDocumentMoniker": "Productos.Dominio\\Puertos\\Repositorios\\IParametroRepositorio.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Puertos\\Repositorios\\IParametroRepositorio.cs",
+              "RelativeToolTip": "Productos.Dominio\\Puertos\\Repositorios\\IParametroRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T04:23:31.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Producto.cs",
-              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\masivoProductos_compras_microservicio\\Productos.Dominio\\Entidades\\Producto.cs",
-              "RelativeDocumentMoniker": "Productos.Dominio\\Entidades\\Producto.cs",
-              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\masivoProductos_compras_microservicio\\Productos.Dominio\\Entidades\\Producto.cs",
-              "RelativeToolTip": "Productos.Dominio\\Entidades\\Producto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\ServicioProducto\\Program.cs",
+              "RelativeDocumentMoniker": "ServicioProducto\\Program.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\ServicioProducto\\Program.cs",
+              "RelativeToolTip": "ServicioProducto\\Program.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAADcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T23:54:26.933Z",
+              "WhenOpened": "2025-04-26T05:20:00.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Entidades\\Producto.cs",
+              "RelativeDocumentMoniker": "Productos.Dominio\\Entidades\\Producto.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Entidades\\Producto.cs",
+              "RelativeToolTip": "Productos.Dominio\\Entidades\\Producto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T16:17:39.923Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EntidadBase.cs",
-              "DocumentMoniker": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\masivoProductos_compras_microservicio\\Productos.Dominio\\Entidades\\EntidadBase.cs",
-              "RelativeDocumentMoniker": "Productos.Dominio\\Entidades\\EntidadBase.cs",
-              "ToolTip": "D:\\Edward Romero\\Documents\\MISO\\Proyecto Final II\\masivoProductos_compras_microservicio\\Productos.Dominio\\Entidades\\EntidadBase.cs",
-              "RelativeToolTip": "Productos.Dominio\\Entidades\\EntidadBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAVAAAAAAAAAA==",
+              "Title": "IProductoRepositorio.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Puertos\\Repositorios\\IProductoRepositorio.cs",
+              "RelativeDocumentMoniker": "Productos.Dominio\\Puertos\\Repositorios\\IProductoRepositorio.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Puertos\\Repositorios\\IProductoRepositorio.cs",
+              "RelativeToolTip": "Productos.Dominio\\Puertos\\Repositorios\\IProductoRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T23:51:51.656Z",
+              "WhenOpened": "2025-04-26T04:23:27.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\ServicioProducto\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "ServicioProducto\\Controllers\\ProductosController.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\ServicioProducto\\Controllers\\ProductosController.cs",
+              "RelativeToolTip": "ServicioProducto\\Controllers\\ProductosController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T16:15:45.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Proveedor.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\ObjetoValor\\Proveedor.cs",
+              "RelativeDocumentMoniker": "Productos.Dominio\\ObjetoValor\\Proveedor.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\ObjetoValor\\Proveedor.cs",
+              "RelativeToolTip": "Productos.Dominio\\ObjetoValor\\Proveedor.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T04:21:24.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductosDbContext.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Infraestructura\\Adaptadores\\Repositorios\\ProductosDbContext.cs",
+              "RelativeDocumentMoniker": "Productos.Infraestructura\\Adaptadores\\Repositorios\\ProductosDbContext.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Infraestructura\\Adaptadores\\Repositorios\\ProductosDbContext.cs",
+              "RelativeToolTip": "Productos.Infraestructura\\Adaptadores\\Repositorios\\ProductosDbContext.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T04:41:56.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IngresarInventario.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Servicios\\Stock\\IngresarInventario.cs",
+              "RelativeDocumentMoniker": "Productos.Dominio\\Servicios\\Stock\\IngresarInventario.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Servicios\\Stock\\IngresarInventario.cs",
+              "RelativeToolTip": "Productos.Dominio\\Servicios\\Stock\\IngresarInventario.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T04:29:44.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IRepositorioBase.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Infraestructura\\Adaptadores\\RepositorioGenerico\\IRepositorioBase.cs",
+              "RelativeDocumentMoniker": "Productos.Infraestructura\\Adaptadores\\RepositorioGenerico\\IRepositorioBase.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Infraestructura\\Adaptadores\\RepositorioGenerico\\IRepositorioBase.cs",
+              "RelativeToolTip": "Productos.Infraestructura\\Adaptadores\\RepositorioGenerico\\IRepositorioBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T04:05:22.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RepositorioBase.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Infraestructura\\Adaptadores\\RepositorioGenerico\\RepositorioBase.cs",
+              "RelativeDocumentMoniker": "Productos.Infraestructura\\Adaptadores\\RepositorioGenerico\\RepositorioBase.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Infraestructura\\Adaptadores\\RepositorioGenerico\\RepositorioBase.cs",
+              "RelativeToolTip": "Productos.Infraestructura\\Adaptadores\\RepositorioGenerico\\RepositorioBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T04:06:10.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Consultar.cs",
+              "DocumentMoniker": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Servicios\\Productos\\Consultar.cs",
+              "RelativeDocumentMoniker": "Productos.Dominio\\Servicios\\Productos\\Consultar.cs",
+              "ToolTip": "D:\\Git\\CCP\\masivoProductos_compras_microservicio\\Productos.Dominio\\Servicios\\Productos\\Consultar.cs",
+              "RelativeToolTip": "Productos.Dominio\\Servicios\\Productos\\Consultar.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T04:28:53.296Z",
               "EditorCaption": ""
             }
           ]
