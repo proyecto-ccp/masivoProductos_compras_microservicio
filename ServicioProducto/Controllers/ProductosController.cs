@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Productos.Aplicacion.Comun;
 using Productos.Aplicacion.Producto.Comandos;
@@ -36,8 +37,8 @@ namespace ServicioProducto.Api.Controllers
         [Route("Crear")]
         [ProducesResponseType(typeof(BaseOut), 201)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(ValidationProblemDetails), 401)]
-        [ProducesResponseType(typeof(ValidationProblemDetails), 500)]
+        [ProducesResponseType(typeof(ProblemDetails), 401)]
+        [ProducesResponseType(typeof(ProblemDetails), 500)]
         public async Task<IActionResult> Crear([FromBody] ProductoCrear producto)
         {
             var output = await _mediator.Send(producto);
@@ -65,8 +66,8 @@ namespace ServicioProducto.Api.Controllers
         [Route("Consultar")]
         [ProducesResponseType(typeof(ListaProductosOut), 200)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(ValidationProblemDetails), 401)]
-        [ProducesResponseType(typeof(ValidationProblemDetails), 500)]
+        [ProducesResponseType(typeof(ProblemDetails), 401)]
+        [ProducesResponseType(typeof(ProblemDetails), 500)]
         public async Task<IActionResult> Consultar()
         {
             var output = await _mediator.Send(new ProductosConsulta());
@@ -98,8 +99,8 @@ namespace ServicioProducto.Api.Controllers
         [Route("ConsultarPorProveedor")]
         [ProducesResponseType(typeof(ListaProductosOut), 200)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(ValidationProblemDetails), 401)]
-        [ProducesResponseType(typeof(ValidationProblemDetails), 500)]
+        [ProducesResponseType(typeof(ProblemDetails), 401)]
+        [ProducesResponseType(typeof(ProblemDetails), 500)]
         public async Task<IActionResult> ConsultarPorProveedor([FromQuery] ProductosPorProveedorConsulta input)
         {
             var output = await _mediator.Send(input);
@@ -131,8 +132,8 @@ namespace ServicioProducto.Api.Controllers
         [Route("ConsultarPorId")]
         [ProducesResponseType(typeof(ProductoOut), 200)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(ValidationProblemDetails), 401)]
-        [ProducesResponseType(typeof(ValidationProblemDetails), 500)]
+        [ProducesResponseType(typeof(ProblemDetails), 401)]
+        [ProducesResponseType(typeof(ProblemDetails), 500)]
         public async Task<IActionResult> ConsultarPorId([FromQuery] ProductoPorIdConsulta input)
         {
             var output = await _mediator.Send(input);
@@ -140,6 +141,40 @@ namespace ServicioProducto.Api.Controllers
             if (output.Resultado == Resultado.SinRegistros)
             {
                 return NoContent();
+            }
+            else if (output.Resultado == Resultado.Exitoso)
+            {
+                return Ok(output);
+            }
+            else
+            {
+                return Problem(output.Mensaje, statusCode: (int)output.Status);
+            }
+        }
+
+        /// <summary>
+        /// Obtiene las ubicaciones de un producto en las bodegas
+        /// </summary>
+        /// <response code="200"> 
+        /// ListaUbicacionProductoOut: objeto de salida <br/>
+        /// Resultado: Enumerador de la operación, Exitoso = 1, Error = 2, SinRegistros = 3 <br/>
+        /// Mensaje: Mensaje de la operación <br/>
+        /// Status: Código de estado HTTP <br/>
+        /// </response>
+        [HttpGet]
+        [Route("{idproducto}/bodegas")]
+        [ProducesResponseType(typeof(ListaUbicacionProductoOut), 200)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BaseOut), 404)]
+        [ProducesResponseType(typeof(ProblemDetails), 401)]
+        [ProducesResponseType(typeof(ProblemDetails), 500)]
+        public async Task<IActionResult> ConsultarPorId([FromRoute] int idproducto)
+        {
+            var output = await _mediator.Send(new ProductoEnBodegaConsulta(idproducto));
+
+            if (output.Resultado == Resultado.SinRegistros)
+            {
+                return NotFound(new { output.Resultado, output.Mensaje, output.Status });
             }
             else if (output.Resultado == Resultado.Exitoso)
             {
