@@ -13,4 +13,7 @@ namespace Productos.Aplicacion.Producto.Consultas
 
     [ExcludeFromCodeCoverage]
     public record ProductosPorProveedorConsulta(Guid IdProveedor) : IRequest<ListaProductosOut>;
+    
+    [ExcludeFromCodeCoverage]
+    public record ProductoEnBodegaConsulta(int IdProducto) : IRequest<ListaUbicacionProductoOut>;
 }
