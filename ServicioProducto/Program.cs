@@ -8,6 +8,7 @@ using Productos.Dominio.Servicios.Productos;
 using Productos.Dominio.Servicios.Stock;
 using Productos.Dominio.Puertos.Integraciones;
 using Productos.Infraestructura.Adaptadores.Integraciones;
+using Productos.Dominio.Servicios.Ubicaciones;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +29,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Version = "V.1.2.0",
+        Version = "V.1.3.0",
         Title = "Servicio Productos",
         Description = "Administración de productos"
     });
@@ -69,10 +70,12 @@ builder.Services.AddTransient<Productos.Dominio.Puertos.Repositorios.IProductoRe
 builder.Services.AddTransient<IAtributoRepositorio, AtributoRepositorio>();
 builder.Services.AddTransient<IParametroRepositorio, ParametroRepositorio>();
 builder.Services.AddHttpClient<IServicioInventariosApi, ServicioInventariosApi>();
+builder.Services.AddTransient<IUbicacionRespositorio, UbicacionRespositorio>();
 //Capa Dominio - Servicios
 builder.Services.AddTransient<RegistrarProducto>();
 builder.Services.AddTransient<Productos.Dominio.Servicios.Productos.Consultar>();
 builder.Services.AddTransient<IngresarInventario>();
+builder.Services.AddTransient<ConsultarUbicacion>();
 var app = builder.Build();
 
 app.UseSwagger();
