@@ -5,6 +5,7 @@ using Productos.Aplicacion.Comun;
 using Productos.Aplicacion.Producto.Comandos;
 using Productos.Aplicacion.Producto.Consultas;
 using Productos.Aplicacion.Producto.Dto;
+using ServicioProducto.Api.Helpers;
 
 namespace ServicioProducto.Api.Controllers
 {
@@ -15,6 +16,7 @@ namespace ServicioProducto.Api.Controllers
     [Route("api/[controller]")]
     [Consumes("application/json")]
     [Produces("application/json")]
+    [Authorize]
     public class ProductosController : ControllerBase
     {
         private readonly IMediator _mediator;
