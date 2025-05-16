@@ -39,7 +39,7 @@ namespace ServicioProducto.Api.Middleware
 
         private async Task<string> Validar(string token)
         {
-            string usuarioToken = string.Empty;
+            string usuarioToken = null;
             try
             {
                 var resultado = await _autorizador.ValidarToken(token);
@@ -51,7 +51,7 @@ namespace ServicioProducto.Api.Middleware
             }
             catch 
             {
-                usuarioToken = string.Empty;
+                usuarioToken = null;
             }
 
             return usuarioToken;
