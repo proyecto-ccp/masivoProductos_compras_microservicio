@@ -1,0 +1,31 @@
+﻿
+using Microsoft.Extensions.Configuration;
+using Productos.Dominio.ObjetoValor;
+using Productos.Dominio.Puertos.Integraciones;
+using System.Diagnostics.CodeAnalysis;
+using System.Net.Http.Json;
+
+namespace Productos.Infraestructura.Adaptadores.Integraciones
+{
+    [ExcludeFromCodeCoverage]
+    public class ServicioUsuariosApi : IServicioUsuariosApi
+    {
+        private readonly HttpClient _httpClient;
+        private readonly IConfiguration _configuration;
+        public ServicioUsuariosApi(HttpClient httpClient, IConfiguration configuration)
+        {
+            _httpClient = httpClient;
+            _configuration = configuration;
+        }
+        public async Task<TokenInfo> ValidarToken(string token)
+        {
+            var uri = _configuration["UriAutorizador"];
+            _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+            var respuesta = await _httpClient.GetAsync($"{uri}");
+            respuesta.EnsureSuccessStatusCode();
+            var objRespuesta = await respuesta.Content.ReadFromJsonAsync<TokenInfo>();
+            return objRespuesta;
+
+        }
+    }
+}
