@@ -3,9 +3,11 @@ using AutoMapper;
 using MediatR;
 using Productos.Aplicacion.Comun;
 using Productos.Dominio.ObjetoValor;
+using Productos.Dominio.Puertos.Integraciones;
 using Productos.Dominio.Servicios.Productos;
 using Productos.Dominio.Servicios.Stock;
 using System.Net;
+using System.Text.Json;
 
 namespace Productos.Aplicacion.Producto.Comandos
 {
@@ -15,13 +17,15 @@ namespace Productos.Aplicacion.Producto.Comandos
         private readonly RegistrarProducto _registrarProducto;
         private readonly IngresarInventario _ingresarInventario;
         private readonly Consultar _servicio;
+        private readonly IServicioAuditoriaApi _servicioAuditoriaApi;
 
-        public ProductoCrearHandler(IMapper mapper, RegistrarProducto registrarProducto, IngresarInventario ingresarInventario, Consultar servicio)
+        public ProductoCrearHandler(IMapper mapper, RegistrarProducto registrarProducto, IngresarInventario ingresarInventario, Consultar servicio, IServicioAuditoriaApi servicioAuditoriaApi)
         {
             _mapper = mapper;
             _registrarProducto = registrarProducto;
             _ingresarInventario = ingresarInventario;
             _servicio = servicio;
+            _servicioAuditoriaApi = servicioAuditoriaApi;
         }
         public async Task<BaseOut> Handle(ProductoCrear request, CancellationToken cancellationToken)
         {
@@ -38,6 +42,10 @@ namespace Productos.Aplicacion.Producto.Comandos
                     var productoCreado = await _registrarProducto.Crear(productoNuevo);
                     productoNuevo.Id = productoCreado.Id;
                     output.Mensaje = "Producto registrado correctamente";
+                    var inputAuditoria = _mapper.Map<Auditoria>(request);
+                    inputAuditoria.IdRegistro = productoCreado.Id.ToString();
+                    inputAuditoria.Registro = JsonSerializer.Serialize(productoCreado);
+                    _ = Task.Run(() => _servicioAuditoriaApi.RegistrarAuditoria(inputAuditoria), cancellationToken);
                 }
                 else 
                 {
@@ -51,11 +59,10 @@ namespace Productos.Aplicacion.Producto.Comandos
                     CantidadStock = (int)request.Cantidad,
                 };
                 
-                var procesoInventario = await actualizarInventario(ingresarStock);
+                _ = Task.Run(() => ActualizarInventario(ingresarStock, request.Control.Token));
                 
                 output.Resultado = Resultado.Exitoso;
                 output.Status = HttpStatusCode.Created;
-                output.Mensaje = string.Concat(output.Mensaje, " - ", procesoInventario.Mensaje);
 
             }
             catch (Exception ex)
@@ -67,13 +74,13 @@ namespace Productos.Aplicacion.Producto.Comandos
 
             return output;
         }
-        private async Task<BaseOut> actualizarInventario(IngresarStock input) 
+        private async Task<BaseOut> ActualizarInventario(IngresarStock input, string token) 
         {
             BaseOut output = new();
 
             try
             {
-                await _ingresarInventario.Ejecutar(input);
+                await _ingresarInventario.Ejecutar(input, token);
                 output.Mensaje = "Inventario actualizado correctamente";
             }
             catch (Exception ex)

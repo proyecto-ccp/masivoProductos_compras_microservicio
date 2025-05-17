@@ -1,5 +1,6 @@
 ﻿
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Productos.Aplicacion.Comun;
@@ -35,7 +36,19 @@ namespace Productos.Tests.Controllers
                 .ReturnsAsync(output);
 
             var objPrueba = new ProductosController(mockMediator.Object);
+            var httpContext = new DefaultHttpContext();
+            httpContext.Request.Headers["Authorization"] = "Bearer pruebas-token-123";
+            httpContext.Items["UserId"] = Guid.NewGuid().ToString();
+            objPrueba.ControllerContext = new ControllerContext()
+            {
+                HttpContext = httpContext
+            };
 
+            var baseIn = new BaseIn
+            {
+                Token = "tokenPruebasUnitarias",
+                IdUsuario = Guid.NewGuid().ToString(),
+            };
             var request = new ProductoCrear
             (
                 "Pruebas",
@@ -50,7 +63,8 @@ namespace Productos.Tests.Controllers
                 1,
                 "http://example.com/foto1.jpg",
                 "http://example.com/foto2.jpg",
-                100
+                100,
+                baseIn
             );
 
             var resultado = await objPrueba.Crear(request);
