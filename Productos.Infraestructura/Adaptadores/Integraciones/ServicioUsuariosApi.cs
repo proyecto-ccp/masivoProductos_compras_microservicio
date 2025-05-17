@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Productos.Dominio.ObjetoValor;
 using Productos.Dominio.Puertos.Integraciones;
 using System.Diagnostics.CodeAnalysis;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 
 namespace Productos.Infraestructura.Adaptadores.Integraciones
@@ -20,7 +21,7 @@ namespace Productos.Infraestructura.Adaptadores.Integraciones
         public async Task<TokenInfo> ValidarToken(string token)
         {
             var uri = _configuration["UriAutorizador"];
-            _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var respuesta = await _httpClient.GetAsync($"{uri}");
             respuesta.EnsureSuccessStatusCode();
             var objRespuesta = await respuesta.Content.ReadFromJsonAsync<TokenInfo>();
