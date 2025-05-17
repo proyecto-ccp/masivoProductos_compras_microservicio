@@ -3,6 +3,7 @@ using MediatR;
 using Productos.Aplicacion.Comun;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
+using System.Text.Json.Serialization;
 
 namespace Productos.Aplicacion.Producto.Comandos
 {
@@ -34,6 +35,7 @@ namespace Productos.Aplicacion.Producto.Comandos
         string UrlFoto2,
         [Required(ErrorMessage = "El campo Cantidad es obligatorio")]
         int? Cantidad,
+        [property: JsonIgnore]
         BaseIn Control
         ) : IRequest<BaseOut>;
     
