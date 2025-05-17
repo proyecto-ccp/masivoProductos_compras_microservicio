@@ -27,7 +27,7 @@ namespace ServicioProducto.Api.Middleware
         /// </summary>
         public async Task InvokeAsync(HttpContext context)
         {
-            var token = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+            var token = context.Request.Headers["Authorization"].ToString();
 
             if (!string.IsNullOrEmpty(token)) 
             {
