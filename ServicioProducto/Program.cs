@@ -73,6 +73,7 @@ builder.Services.AddTransient<IParametroRepositorio, ParametroRepositorio>();
 builder.Services.AddHttpClient<IServicioInventariosApi, ServicioInventariosApi>();
 builder.Services.AddTransient<IUbicacionRespositorio, UbicacionRespositorio>();
 builder.Services.AddHttpClient<IServicioUsuariosApi, ServicioUsuariosApi>();
+builder.Services.AddHttpClient<IServicioAuditoriaApi, ServicioAuditoriaApi>();
 //Capa Dominio - Servicios
 builder.Services.AddTransient<RegistrarProducto>();
 builder.Services.AddTransient<Productos.Dominio.Servicios.Productos.Consultar>();
