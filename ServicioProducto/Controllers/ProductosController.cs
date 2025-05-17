@@ -1,5 +1,6 @@
 ﻿
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Productos.Aplicacion.Comun;
 using Productos.Aplicacion.Producto.Comandos;
@@ -43,7 +44,13 @@ namespace ServicioProducto.Api.Controllers
         [ProducesResponseType(typeof(ProblemDetails), 500)]
         public async Task<IActionResult> Crear([FromBody] ProductoCrear producto)
         {
-            var output = await _mediator.Send(producto);
+            var baseIn = new BaseIn
+            {
+                Token = HttpContext.Request.Headers.Authorization.ToString().Replace("Bearer ", ""),
+                IdUsuario = HttpContext.Items["UserId"].ToString()
+            };
+            var input = producto with { Control = baseIn }; 
+            var output = await _mediator.Send(input);
 
             if (output.Resultado != Resultado.Error)
             {
