@@ -37,7 +37,7 @@ namespace Productos.Tests.Controllers
 
             var objPrueba = new ProductosController(mockMediator.Object);
             var httpContext = new DefaultHttpContext();
-            httpContext.Request.Headers["Authorization"] = "Bearer pruebas-token-123";
+            httpContext.Request.Headers.Authorization = "Bearer pruebas-token-123";
             httpContext.Items["UserId"] = Guid.NewGuid().ToString();
             objPrueba.ControllerContext = new ControllerContext()
             {
