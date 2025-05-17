@@ -7,7 +7,7 @@ using System.Diagnostics.CodeAnalysis;
 namespace Productos.Aplicacion.Producto.Comandos
 {
     [ExcludeFromCodeCoverage]
-    public record ProductoCrear(
+    public record ProductoCrear (
         
         [Required(ErrorMessage = "El campo Nombre es obligatorio")]
         string Nombre,
@@ -33,7 +33,8 @@ namespace Productos.Aplicacion.Producto.Comandos
         string UrlFoto1,
         string UrlFoto2,
         [Required(ErrorMessage = "El campo Cantidad es obligatorio")]
-        int? Cantidad
+        int? Cantidad,
+        BaseIn Control
         ) : IRequest<BaseOut>;
     
 }
