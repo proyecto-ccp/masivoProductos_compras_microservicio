@@ -7,6 +7,7 @@ using Productos.Aplicacion.Comun;
 using Productos.Aplicacion.Producto.Comandos;
 using Productos.Aplicacion.Producto.Consultas;
 using Productos.Aplicacion.Producto.Dto;
+using Productos.Dominio.Servicios.Ubicaciones;
 using ServicioProducto.Api.Controllers;
 using System.Net;
 
@@ -218,6 +219,51 @@ namespace Productos.Tests.Controllers
             {
                 var verResultado = Assert.IsType<NoContentResult>(resultado);
                 Assert.Equal(204, verResultado.StatusCode);
+
+            }
+        }
+
+        [Theory]
+        [InlineData(Resultado.Exitoso, HttpStatusCode.OK)]
+        [InlineData(Resultado.Error, HttpStatusCode.InternalServerError)]
+        [InlineData(Resultado.SinRegistros, HttpStatusCode.NotFound)]
+        public async Task ConsultarUbicacion_respuestas(Resultado enumRes, HttpStatusCode status)
+        {
+            var output = new ListaUbicacionProductoOut
+            {
+                Resultado = enumRes,
+                Status = status
+            };
+
+            mockMediator.Setup(m => m.Send(It.IsAny<ProductoEnBodegaConsulta>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(output);
+
+            var objPrueba = new ProductosController(mockMediator.Object);
+
+            var request = new ProductoEnBodegaConsulta(11);
+
+            var resultado = await objPrueba.ConsultarUbicacion(11);
+
+            Assert.NotNull(resultado);
+
+            if (enumRes == Resultado.Exitoso)
+            {
+                var verResultado = Assert.IsType<OkObjectResult>(resultado);
+                var res = verResultado.Value as ListaUbicacionProductoOut;
+                Assert.IsType<ListaUbicacionProductoOut>(res);
+                Assert.Equal(200, verResultado.StatusCode);
+            }
+            else if (enumRes == Resultado.Error)
+            {
+                var verResultado = Assert.IsType<ObjectResult>(resultado);
+                var res = verResultado.Value as ProblemDetails;
+                Assert.IsType<ProblemDetails>(res);
+                Assert.Equal(500, verResultado.StatusCode);
+            }
+            else
+            {
+                var verResultado = Assert.IsType<NotFoundObjectResult>(resultado);
+                Assert.Equal(404, verResultado.StatusCode);
 
             }
         }
