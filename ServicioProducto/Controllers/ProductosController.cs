@@ -177,7 +177,7 @@ namespace ServicioProducto.Api.Controllers
         [ProducesResponseType(typeof(BaseOut), 404)]
         [ProducesResponseType(typeof(ProblemDetails), 401)]
         [ProducesResponseType(typeof(ProblemDetails), 500)]
-        public async Task<IActionResult> ConsultarPorId([FromRoute] int idproducto)
+        public async Task<IActionResult> ConsultarUbicacion([FromRoute] int idproducto)
         {
             var output = await _mediator.Send(new ProductoEnBodegaConsulta(idproducto));
 
